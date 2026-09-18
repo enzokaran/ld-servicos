@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
-<title>LD Engenharia e Serviços | Engenharia, Elétrica, Civil e Manutenção</title>
-<meta name="description" content="LD Engenharia e Serviços — soluções em engenharia, elétrica, civil, poda, roçada e manutenção em Santa Catarina.">
+<title>LD Engenharia e Serviços | Roçada, Poda, Elétrica, Civil e Manutenção</title>
+<meta name="description" content="LD Engenharia e Serviços — roçada, corte de vegetação e limpeza de terrenos, além de poda, engenharia, elétrica, civil e manutenção em Santa Catarina.">
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABBCAMAAABW61JJAAAAwFBMVEUAAAD+/v7////////////+/v7+//7///////8epGIepGIgq2cAfz8epGIA/wAoqGwtmGYbpGoqqlUfn18ZplgXol4epGIA//8ktm3K6doAf38AmTMcm2MZoV0VoVwgpWO+5NKq/6q////J6NnK8d7U8eMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC0Ezl4AAAAMHRSTlMA+gaqkcxObij31v4EWQEOBxIGCAr8ZwEH+gIFElrX2cwDBFH//wAAAAAAAAAAAAChDGGzAAABoklEQVR42u3X6W4CIRAAYOT2qNXWWnvf7/+K5VyuRWHWtEnT+WNC8HNgZwdEnIwHG43X55dFGkjMeuJrvsyiE7i7Wc7T+GngM1+CAwhvjI+niyT2DhAIGDsP4NZYxfGw2g4ZYMjvr9HlGQA6Cdj+OpAtwW91mJI/hBx47M4gMbIMMOLUBHccRpjGIbhMiTXaLCzALUBswdMA5O8CE2ZiyGAUEHVA8zhaLwSYMR6ELQQwExyxgwHDLqHrVkA31CyHLsBWkRQBkXbOoRXwZTQ0QGbL8tCVgf6OTBexac7A5RAJZuyqF1CffhUcCGDsdpLoMV+JshmIUtCDKgPSDcjhSb7pTewF1DALmwABkmmTgfspgF7CLWQTwx68gwAs4/dpD8hA+NfJDnYCWSUCAFu6vvyRPAGY84AMjVi9zzxuCOorx4DiUFLDPOkHNWDkZjLekSoArxyLZU+sAMQsvLzwll25ApyOcHrCABFaJASIzkYQQJO67gXS+4EBWAQIejSKG0oG9N+RCqDhrpxx/Rn8A3UAQ8MBGPqf6WwZTIi/AJCJwDfEMhyg9v1QXAAAAABJRU5ErkJggg==">
 <meta name="theme-color" content="#0c0f0e">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,7 +42,8 @@
        comercial (Unsplash / Pexels) e servem apenas como ILUSTRACAO dos
        servicos — nao representam obras executadas pela LD.
        ================================================================= */
-    --img-hero:         url("https://images.unsplash.com/photo-1635249578213-68b0aa67fdf7?auto=format&fit=crop&w=1400&q=72");   /* hero-engineering.jpg */
+    --img-hero:         url("https://images.pexels.com/photos/6728933/pexels-photo-6728933.jpeg?auto=compress&cs=tinysrgb&w=1400");   /* hero-rocada.jpg — profissional realizando roçada */
+    --img-rocada-feature: url("https://images.unsplash.com/photo-1754321895426-68b04ba453e3?auto=format&fit=crop&w=1600&q=72");  /* rocada-feature.jpg — foto grande da secao de rocada */
     --img-engineering:  url("https://images.unsplash.com/photo-1628158088791-89567a8e84ec?auto=format&fit=crop&w=1000&q=70");   /* engineering.jpg      */
     --img-electrical:   url("https://images.unsplash.com/photo-1758101755915-462eddc23f57?auto=format&fit=crop&w=1000&q=70");   /* electrical.jpg       */
     --img-civil:        url("https://images.unsplash.com/photo-1694521787193-9293daeddbaa?auto=format&fit=crop&w=1000&q=70");   /* civil.jpg            */
@@ -303,13 +304,13 @@
   }
   #hero.hero-ready .hero-photo{--ps:1;}
   /* desktop grande: foto inteira, enquadramento padrao */
-  @media (min-width:1440px){ .hero-frame{ --hero-pos: center 25%; } }
-  /* desktop/notebook: leve ajuste para nao cortar o rosto */
-  @media (min-width:1024px) and (max-width:1439px){ .hero-frame{ --hero-pos: center 30%; } }
-  /* tablet: frame fica mais largo (16/11), sobe o foco para o torso/rosto */
-  @media (min-width:768px) and (max-width:1023px){ .hero-frame{ --hero-pos: center 20%; } }
+  @media (min-width:1440px){ .hero-frame{ --hero-pos: center 38%; } }
+  /* desktop/notebook: leve ajuste para nao cortar o profissional */
+  @media (min-width:1024px) and (max-width:1439px){ .hero-frame{ --hero-pos: center 40%; } }
+  /* tablet: frame fica mais largo (16/11), sobe o foco para manter a roçada visivel */
+  @media (min-width:768px) and (max-width:1023px){ .hero-frame{ --hero-pos: center 32%; } }
   /* celular: frame ainda mais largo, foco perto do topo para manter o trabalhador visivel */
-  @media (max-width:767px){ .hero-frame{ --hero-pos: center 12%; } }
+  @media (max-width:767px){ .hero-frame{ --hero-pos: center 22%; } }
   /* mascara escura nas extremidades para a foto conversar com o fundo */
   .hero-frame::after{
     content:"";position:absolute;inset:0;pointer-events:none;
@@ -347,8 +348,9 @@
   @media (max-width:1023px){.hero-visual .vdots{display:none;}}
   /* selo com a logo sobreposto a imagem */
   .hero-badge{
-    position:absolute;left:-16px;bottom:26px;z-index:4;
+    position:absolute;left:16px;bottom:16px;right:16px;z-index:4;
     display:none;align-items:center;gap:12px;
+    max-width:calc(100% - 32px);
     padding:14px 20px;
     background:rgba(12,15,14,.86);
     backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
@@ -356,8 +358,10 @@
     box-shadow:0 20px 40px -20px rgba(0,0,0,.8);
     opacity:0;transform:translateY(10px);
     transition:opacity .8s var(--ease) .5s, transform .8s var(--ease) .5s;
+    overflow:hidden;
   }
-  @media (min-width:1024px){.hero-badge{display:flex;}}
+  .hero-badge img{max-width:100%;}
+  @media (min-width:1024px){.hero-badge{display:flex;left:20px;right:auto;bottom:20px;}}
   #hero.hero-ready .hero-badge{opacity:1;transform:translateY(0);}
   .hero-badge img{height:30px;width:auto;}
   .hero-badge .bt{
@@ -425,8 +429,53 @@
   .section-head p{font-size:16.5px;color:var(--text-body);line-height:1.6;max-width:52ch;}
   .split-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;}
 
+  /* ---------- rocada (servico em destaque) ---------- */
+  .rocada-feature{background:var(--graphite-950);color:#fff;overflow:hidden;}
+  .rocada-grid{display:grid;grid-template-columns:1fr;gap:44px;align-items:center;}
+  @media (min-width:960px){.rocada-grid{grid-template-columns:1fr 1.05fr;gap:64px;}}
+  .rocada-visual{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(0,0,0,.75), 0 0 0 1px rgba(255,255,255,.06);}
+  @media (min-width:960px){.rocada-visual{aspect-ratio:3/4;}}
+  .rocada-photo{position:absolute;inset:0;background-image:var(--img);background-size:cover;background-position:center;background-color:var(--graphite-800);}
+  .rocada-visual::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(to top, rgba(12,15,14,.8) 0%, rgba(12,15,14,0) 42%), linear-gradient(200deg, rgba(15,127,75,.18), transparent 55%);
+  }
+  .rocada-badge{
+    position:absolute;left:16px;bottom:16px;z-index:2;
+    display:inline-flex;align-items:center;gap:10px;
+    padding:10px 16px;background:var(--green);color:#fff;
+    font-size:12.5px;font-weight:600;letter-spacing:.02em;border-radius:100px;
+  }
+  .rocada-badge .num{font-family:'Space Grotesk',sans-serif;font-variant-numeric:tabular-nums;}
+  .rocada-copy .tag{color:var(--green-light);margin-bottom:18px;}
+  #rocada h2{color:#fff;font-size:clamp(30px,4.5vw,46px);margin-bottom:20px;}
+  .rocada-lede{color:rgba(255,255,255,.72);font-size:16.5px;line-height:1.75;max-width:50ch;margin-bottom:32px;}
+  .rocada-benefits{list-style:none;margin:0 0 32px;padding:0;display:grid;gap:14px;}
+  .rocada-benefits li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:rgba(255,255,255,.85);line-height:1.5;}
+  .rocada-benefits svg{width:20px;height:20px;color:var(--green-light);flex-shrink:0;margin-top:1px;}
+  .rocada-areas{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;}
+  .rocada-areas span{font-size:12.5px;padding:7px 14px;border:1px solid var(--line-dark);border-radius:100px;color:rgba(255,255,255,.75);}
+  .rocada-note{font-size:14px;color:rgba(255,255,255,.55);margin-top:18px;}
+
   /* ---------- services ---------- */
   #services{background:var(--white);}
+  .service-featured{
+    display:grid;grid-template-columns:1fr;gap:0;
+    margin-bottom:40px;border:1px solid var(--line);overflow:hidden;background:var(--white);
+    transition:box-shadow .35s var(--ease);
+  }
+  .service-featured:hover{box-shadow:0 24px 48px -24px rgba(12,15,14,.18);}
+  @media (min-width:768px){.service-featured{grid-template-columns:1.1fr 1fr;}}
+  .sf-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--graphite-800);}
+  @media (min-width:768px){.sf-media{aspect-ratio:auto;}}
+  .sf-media .photo{position:absolute;inset:0;transition:transform .7s var(--ease);}
+  .service-featured:hover .sf-media .photo{transform:scale(1.05);}
+  .sf-content{padding:36px 32px;display:flex;flex-direction:column;justify-content:center;gap:14px;}
+  @media (min-width:768px){.sf-content{padding:40px 44px;}}
+  .sf-tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:.05em;}
+  .sf-content h3{font-size:clamp(24px,3vw,32px);}
+  .sf-content p{font-size:15.5px;line-height:1.65;color:var(--text-body);max-width:46ch;}
+  .sf-content .btn{align-self:flex-start;margin-top:6px;}
   .services-grid{
     display:grid;grid-template-columns:1fr;gap:1px;
     background:var(--line);
@@ -737,6 +786,7 @@
     </a>
     <nav aria-label="Navegação principal">
       <a href="#top">Início</a>
+      <a href="#rocada">Roçada</a>
       <a href="#services">Serviços</a>
       <a href="#about">Sobre</a>
       <a href="#portfolio">Projetos</a>
@@ -755,6 +805,7 @@
 <div id="mobile-menu">
   <nav aria-label="Menu mobile">
     <a href="#top">Início</a>
+    <a href="#rocada">Roçada</a>
     <a href="#services">Serviços</a>
     <a href="#about">Sobre</a>
     <a href="#portfolio">Projetos</a>
@@ -776,26 +827,26 @@
 
     <div class="hero-copy">
       <div class="kicker"><span class="line"></span> Engenharia &amp; Serviços — Santa Catarina</div>
-      <h1>Engenharia que entrega.<br><span class="accent">Serviços que resolvem.</span></h1>
-      <p class="lede">Soluções em engenharia, elétrica, serviços civis e manutenção para diferentes necessidades.</p>
+      <h1>Engenharia que entrega.<br><span class="accent">Roçada e manutenção que resolvem.</span></h1>
+      <p class="lede">Roçada, limpeza e manutenção de terrenos e áreas externas — além de soluções em poda, engenharia, elétrica e civil, com agilidade e segurança.</p>
       <div class="hero-ctas">
-        <a href="#contact" class="btn btn-primary">Solicitar orçamento</a>
+        <a href="#rocada" class="btn btn-primary">Solicitar orçamento de roçada</a>
         <a href="#" class="btn btn-whatsapp js-wa-link" target="_blank" rel="noopener">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.29-1.39a9.9 9.9 0 0 0 4.7 1.2h.01c5.46 0 9.91-4.45 9.91-9.9 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2m0 1.67c2.23 0 4.33.87 5.9 2.45a8.23 8.23 0 0 1 2.43 5.85c0 4.56-3.72 8.28-8.29 8.28a8.3 8.3 0 0 1-4.22-1.15l-.3-.18-3.14.82.84-3.06-.2-.32a8.2 8.2 0 0 1-1.27-4.42c0-4.57 3.72-8.27 8.25-8.27M8.5 7c-.17 0-.46.06-.7.32-.24.26-.9.88-.9 2.15s.92 2.5 1.05 2.67c.13.17 1.8 2.9 4.45 3.94 2.2.87 2.65.7 3.13.65.47-.05 1.53-.62 1.75-1.22.22-.6.22-1.11.15-1.22-.06-.1-.24-.17-.5-.3-.26-.13-1.53-.75-1.77-.84-.24-.09-.4-.13-.58.13-.17.26-.66.84-.81 1.01-.15.17-.3.19-.56.06-.26-.13-1.1-.4-2.1-1.28-.78-.68-1.3-1.53-1.46-1.79-.15-.26-.02-.4.11-.53.12-.12.26-.3.4-.46.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45C9.68 8.9 9.16 7.62 8.93 7.1 8.75 6.7 8.56 6.7 8.4 6.7l-.4-.01Z"/></svg>
           Falar pelo WhatsApp
         </a>
       </div>
       <div class="hero-meta">
+        <div><strong>Roçada</strong>Terrenos · Áreas externas</div>
+        <div><strong>Serviços</strong>Poda · Manutenção</div>
         <div><strong>Engenharia</strong>Elétrica · Civil</div>
-        <div><strong>Serviços</strong>Poda · Roçada · Manutenção</div>
-        <div><strong>Atuação</strong>Santa Catarina — SC</div>
       </div>
     </div>
 
     <!-- composicao visual do hero (foto ilustrativa — trocar em --img-hero) -->
     <div class="hero-visual">
       <div class="hero-frame">
-        <div class="hero-photo" role="img" aria-label="Profissional de engenharia com capacete de segurança em ambiente de obra"></div>
+        <div class="hero-photo" role="img" aria-label="Profissional realizando roçada e corte de vegetação em terreno"></div>
       </div>
       <span class="vcorner tl" aria-hidden="true"></span>
       <span class="vcorner br" aria-hidden="true"></span>
@@ -813,64 +864,116 @@
 </section>
 
 <main>
+<!-- ============ ROÇADA — SERVIÇO EM DESTAQUE ============ -->
+<section id="rocada" class="section-pad rocada-feature">
+  <div class="container rocada-grid">
+    <div class="rocada-visual reveal">
+      <div class="rocada-photo" style="--img:var(--img-rocada-feature)" role="img" aria-label="Profissional realizando roçada e corte de vegetação em área externa"></div>
+      <div class="rocada-badge"><span class="num">01</span><span>Serviço em destaque</span></div>
+      <span class="vcorner tl" aria-hidden="true"></span>
+      <span class="vcorner br" aria-hidden="true"></span>
+    </div>
+    <div class="rocada-copy reveal">
+      <div class="tag"><span class="dot"></span>Um dos principais serviços da LD</div>
+      <h2>Roçada e corte de vegetação.</h2>
+      <p class="rocada-lede">Limpeza e manutenção de terrenos e áreas externas com vegetação alta — controle do crescimento, preparação de áreas e conservação, com agilidade e segurança do início ao fim.</p>
+
+      <ul class="rocada-benefits">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Limpeza completa de terrenos e áreas externas</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Controle e prevenção do crescimento da vegetação</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Preparação e conservação de áreas para uso ou construção</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Atendimento pontual ou manutenção periódica</span>
+        </li>
+      </ul>
+
+      <div class="rocada-areas">
+        <span>Terrenos</span><span>Áreas industriais</span><span>Áreas comerciais</span><span>Condomínios</span><span>Áreas externas</span>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Solicitar orçamento de roçada</a>
+        <a href="#" class="btn btn-ghost-light js-wa-link" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.29-1.39a9.9 9.9 0 0 0 4.7 1.2h.01c5.46 0 9.91-4.45 9.91-9.9 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2m0 1.67c2.23 0 4.33.87 5.9 2.45a8.23 8.23 0 0 1 2.43 5.85c0 4.56-3.72 8.28-8.29 8.28a8.3 8.3 0 0 1-4.22-1.15l-.3-.18-3.14.82.84-3.06-.2-.32a8.2 8.2 0 0 1-1.27-4.42c0-4.57 3.72-8.27 8.25-8.27M8.5 7c-.17 0-.46.06-.7.32-.24.26-.9.88-.9 2.15s.92 2.5 1.05 2.67c.13.17 1.8 2.9 4.45 3.94 2.2.87 2.65.7 3.13.65.47-.05 1.53-.62 1.75-1.22.22-.6.22-1.11.15-1.22-.06-.1-.24-.17-.5-.3-.26-.13-1.53-.75-1.77-.84-.24-.09-.4-.13-.58.13-.17.26-.66.84-.81 1.01-.15.17-.3.19-.56.06-.26-.13-1.1-.4-2.1-1.28-.78-.68-1.3-1.53-1.46-1.79-.15-.26-.02-.4.11-.53.12-.12.26-.3.4-.46.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45C9.68 8.9 9.16 7.62 8.93 7.1 8.75 6.7 8.56 6.7 8.4 6.7l-.4-.01Z"/></svg>
+          Falar pelo WhatsApp
+        </a>
+      </div>
+      <p class="rocada-note">Precisa limpar seu terreno? Agende seu serviço de roçada com a LD.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ============ SERVICES ============ -->
 <section id="services" class="section-pad">
   <div class="container">
     <div class="section-head reveal">
       <div class="tag"><span class="dot"></span>Nossas soluções</div>
       <h2>Áreas de atuação da LD.</h2>
-      <p>Serviços especializados para entregar soluções eficientes, seguras e bem executadas.</p>
+      <p>Serviços especializados para entregar soluções eficientes, seguras e bem executadas — com a roçada como uma das nossas principais frentes.</p>
     </div>
   </div>
   <div class="container">
+
+    <div class="service-featured reveal">
+      <div class="sf-media"><div class="photo" style="--img:var(--img-mowing)" role="img" aria-label="Profissional realizando roçada em terreno"></div></div>
+      <div class="sf-content">
+        <span class="sf-tag">01 · Serviço em destaque</span>
+        <h3>Roçada e corte de vegetação</h3>
+        <p>Limpeza, controle de vegetação e manutenção periódica de terrenos, áreas externas, industriais, comerciais e condomínios.</p>
+        <a href="#rocada" class="btn btn-primary">Ver serviço de roçada</a>
+      </div>
+    </div>
+
     <div class="services-grid reveal-stagger">
 
       <div class="service-card">
-        <div class="service-media"><div class="photo" style="--img:var(--img-engineering)" role="img" aria-label="Engenheiro analisando projeto em obra"></div></div>
-        <span class="num">01</span>
-        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="7"/><path d="M24 4v6M24 38v6M44 24h-6M10 24H4M37.5 10.5l-4.2 4.2M14.7 33.3l-4.2 4.2M37.5 37.5l-4.2-4.2M14.7 14.7l-4.2-4.2"/></svg>
-        <h3>Engenharia</h3>
-        <p>Soluções e serviços de engenharia desenvolvidos de acordo com as necessidades de cada projeto.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-media"><div class="photo" style="--img:var(--img-electrical)" role="img" aria-label="Profissional realizando instalação elétrica"></div></div>
-        <span class="num">02</span>
-        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M26 4 10 27h11l-3 17 18-25H25l1-15Z"/></svg>
-        <h3>Elétrica</h3>
-        <p>Serviços relacionados à área elétrica, buscando segurança, eficiência e qualidade na execução.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-media"><div class="photo" style="--img:var(--img-civil)" role="img" aria-label="Execução de estrutura em construção civil"></div></div>
-        <span class="num">03</span>
-        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 42V14l16-8 16 8v28"/><path d="M8 42h32M18 42V26h12v16M18 20h.01M30 20h.01M24 20h.01M18 14h.01M30 14h.01"/></svg>
-        <h3>Civil</h3>
-        <p>Soluções e serviços na área civil para diferentes necessidades.</p>
-      </div>
-
-      <div class="service-card">
         <div class="service-media"><div class="photo" style="--img:var(--img-pruning)" role="img" aria-label="Profissional realizando poda de árvore"></div></div>
-        <span class="num">04</span>
+        <span class="num">02</span>
         <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10c8 2 16 10 18 18M14 38c8-2 16-10 18-18"/><circle cx="11" cy="10" r="4"/><circle cx="11" cy="38" r="4"/><path d="M15 12 34 30M15 36 34 18"/></svg>
         <h3>Poda</h3>
         <p>Serviços de poda realizados de forma organizada e responsável.</p>
       </div>
 
       <div class="service-card">
-        <div class="service-media"><div class="photo" style="--img:var(--img-mowing)" role="img" aria-label="Manutenção e roçada de área externa"></div></div>
-        <span class="num">05</span>
-        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 42c0-10 2-16 6-22M18 42c0-13 1.5-20 7-28M26 42c0-9 2-15 5-20M34 42c0-7 1.5-12 4-16"/><path d="M6 42h36"/></svg>
-        <h3>Roçada</h3>
-        <p>Serviços de roçada e manutenção de áreas.</p>
+        <div class="service-media"><div class="photo" style="--img:var(--img-civil)" role="img" aria-label="Execução de estrutura em construção civil"></div></div>
+        <span class="num">03</span>
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 42V14l16-8 16 8v28"/><path d="M8 42h32M18 42V26h12v16M18 20h.01M30 20h.01M24 20h.01M18 14h.01M30 14h.01"/></svg>
+        <h3>Serviços Civis</h3>
+        <p>Soluções e serviços na área civil para diferentes necessidades.</p>
       </div>
 
       <div class="service-card">
         <div class="service-media"><div class="photo" style="--img:var(--img-maintenance)" role="img" aria-label="Manutenção técnica de estrutura metálica"></div></div>
-        <span class="num">06</span>
+        <span class="num">04</span>
         <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M31 8a9 9 0 0 0-11.9 10L7 30.1V41h10.9L30 28.9A9 9 0 0 0 40 17l-6.5 6.5-5-5L35 11.5"/></svg>
         <h3>Manutenção</h3>
         <p>Serviços de manutenção para preservar o funcionamento e as condições adequadas dos espaços e estruturas.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-media"><div class="photo" style="--img:var(--img-electrical)" role="img" aria-label="Profissional realizando instalação elétrica"></div></div>
+        <span class="num">05</span>
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M26 4 10 27h11l-3 17 18-25H25l1-15Z"/></svg>
+        <h3>Serviços Elétricos</h3>
+        <p>Serviços relacionados à área elétrica, buscando segurança, eficiência e qualidade na execução.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-media"><div class="photo" style="--img:var(--img-engineering)" role="img" aria-label="Engenheiro analisando projeto em obra"></div></div>
+        <span class="num">06</span>
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="7"/><path d="M24 4v6M24 38v6M44 24h-6M10 24H4M37.5 10.5l-4.2 4.2M14.7 33.3l-4.2 4.2M37.5 37.5l-4.2-4.2M14.7 14.7l-4.2-4.2"/></svg>
+        <h3>Outros Serviços de Engenharia</h3>
+        <p>Soluções e serviços de engenharia desenvolvidos de acordo com as necessidades de cada projeto.</p>
       </div>
 
     </div>
@@ -936,10 +1039,10 @@
       </div>
       <div class="about-copy reveal">
         <div class="tag" style="margin-bottom:18px;"><span class="dot"></span>Quem somos</div>
-        <p>A LD Engenharia e Serviços atua na área de engenharia e prestação de serviços, oferecendo soluções em engenharia, elétrica, civil, poda, roçada e manutenção.</p>
+        <p>A LD Engenharia e Serviços é especializada em roçada, limpeza e manutenção de terrenos e áreas externas, atuando também em poda, engenharia, elétrica e serviços civis.</p>
         <p>Nosso propósito é unir organização, responsabilidade e qualidade para entregar serviços que realmente resolvam as necessidades de nossos clientes.</p>
         <div class="about-tags">
-          <span>Engenharia</span><span>Elétrica</span><span>Civil</span><span>Poda</span><span>Roçada</span><span>Manutenção</span>
+          <span>Roçada</span><span>Poda</span><span>Manutenção</span><span>Engenharia</span><span>Elétrica</span><span>Civil</span>
         </div>
       </div>
     </div>
@@ -956,16 +1059,16 @@
 
     <div class="filter-row reveal" role="tablist" aria-label="Filtrar projetos por categoria" style="justify-content:center;">
       <button class="filter-btn active" data-filter="all">Todos</button>
-      <button class="filter-btn" data-filter="Engenharia">Engenharia</button>
-      <button class="filter-btn" data-filter="Elétrica">Elétrica</button>
-      <button class="filter-btn" data-filter="Civil">Civil</button>
-      <button class="filter-btn" data-filter="Poda">Poda</button>
       <button class="filter-btn" data-filter="Roçada">Roçada</button>
+      <button class="filter-btn" data-filter="Poda">Poda</button>
       <button class="filter-btn" data-filter="Manutenção">Manutenção</button>
+      <button class="filter-btn" data-filter="Civil">Civil</button>
+      <button class="filter-btn" data-filter="Elétrica">Elétrica</button>
+      <button class="filter-btn" data-filter="Engenharia">Engenharia</button>
     </div>
 
     <div class="gallery-grid reveal-stagger" id="gallery">
-      <div class="gallery-item big" data-cat="Engenharia">
+      <div class="gallery-item" data-cat="Engenharia">
         <div class="gallery-card" tabindex="0" role="button" aria-label="Engenharia — Projetos e acompanhamento técnico" data-img="var(--img-project-01)" data-label="Projetos e acompanhamento técnico">
           <div class="ph" style="--img:var(--img-project-01)" role="img" aria-label="Equipe analisando projeto em canteiro de obra"></div>
           <div class="caption"><div class="cat">Engenharia</div><div class="lbl">Projetos e acompanhamento técnico</div><div class="sub">Imagem ilustrativa</div></div>
@@ -993,7 +1096,7 @@
           <div class="zoom-ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></div>
         </div>
       </div>
-      <div class="gallery-item" data-cat="Roçada">
+      <div class="gallery-item big" data-cat="Roçada">
         <div class="gallery-card" tabindex="0" role="button" aria-label="Roçada — Manutenção de áreas externas" data-img="var(--img-project-05)" data-label="Manutenção de áreas externas">
           <div class="ph" style="--img:var(--img-project-05)" role="img" aria-label="Equipamento realizando manutenção de área externa"></div>
           <div class="caption"><div class="cat">Roçada</div><div class="lbl">Manutenção de áreas externas</div><div class="sub">Imagem ilustrativa</div></div>
@@ -1032,8 +1135,8 @@
   <div class="frame two" aria-hidden="true"></div>
   <div class="container">
     <div class="cta-inner reveal">
-      <h2>Precisa de uma solução?</h2>
-      <p>Fale com a LD Engenharia e Serviços e solicite um orçamento.</p>
+      <h2>Precisa limpar seu terreno?</h2>
+      <p>Solicite um orçamento de roçada com a LD — também atendemos poda, engenharia, elétrica, civil e manutenção.</p>
       <div class="hero-ctas">
         <a href="#contact" class="btn btn-primary">Solicitar orçamento</a>
         <a href="#" class="btn btn-ghost-dark js-wa-link" target="_blank" rel="noopener">Falar pelo WhatsApp</a>
@@ -1096,12 +1199,12 @@
             <label for="servico">Tipo de serviço</label>
             <select id="servico" name="servico" required>
               <option value="" disabled selected>Selecione uma opção</option>
-              <option>Engenharia</option>
-              <option>Elétrica</option>
-              <option>Civil</option>
-              <option>Poda</option>
               <option>Roçada</option>
+              <option>Poda</option>
               <option>Manutenção</option>
+              <option>Civil</option>
+              <option>Elétrica</option>
+              <option>Engenharia</option>
               <option>Outro</option>
             </select>
             <span class="field-error">Selecione o tipo de serviço.</span>
@@ -1143,11 +1246,11 @@
     <div class="footer-col">
       <h4>Serviços</h4>
       <ul>
-        <li><a href="#services">Engenharia</a></li>
-        <li><a href="#services">Elétrica</a></li>
-        <li><a href="#services">Civil</a></li>
-        <li><a href="#services">Poda &amp; Roçada</a></li>
+        <li><a href="#rocada">Roçada</a></li>
+        <li><a href="#services">Poda</a></li>
         <li><a href="#services">Manutenção</a></li>
+        <li><a href="#services">Civil</a></li>
+        <li><a href="#services">Elétrica</a></li>
       </ul>
     </div>
     <div class="footer-col">
