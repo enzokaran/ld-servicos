@@ -1217,7 +1217,6 @@
           </div>
 
           <button type="submit" class="btn btn-primary btn-block">Enviar solicitação</button>
-          <!-- TODO (dev): conectar o envio a e-mail / webhook / CRM antes de publicar. -->
           <p class="form-note">Seus dados são utilizados apenas para responder à sua solicitação. Se preferir, fale direto pelo WhatsApp.</p>
         </form>
       </div>
@@ -1401,7 +1400,12 @@
   lightbox.addEventListener("click", function(e){ if(e.target === lightbox) lightbox.classList.remove("open"); });
   document.addEventListener("keydown", function(e){ if(e.key === "Escape") lightbox.classList.remove("open"); });
 
-  // ---- form validation ----
+  // ---- envio do formulario: WhatsApp (na hora) + copia por e-mail via Web3Forms (em segundo plano) ----
+  // TODO (LD): crie uma conta gratuita em https://web3forms.com com o e-mail da empresa,
+  // copie a "Access Key" que eles geram e cole no lugar do texto abaixo antes de publicar.
+  // Sem isso, o WhatsApp continua funcionando normalmente — só a copia por e-mail fica desativada.
+  var WEB3FORMS_ACCESS_KEY = "COLE_SUA_ACCESS_KEY_AQUI";
+
   var form = document.getElementById("contact-form");
   var successBox = document.getElementById("form-success");
   form.addEventListener("submit", function(e){
@@ -1418,11 +1422,47 @@
         wrap.classList.remove("invalid");
       }
     });
-    if(valid){
-      successBox.classList.add("show");
-      form.reset();
-      successBox.scrollIntoView({behavior:"smooth", block:"center"});
+    if(!valid) return;
+
+    var nome = form.nome.value.trim();
+    var telefone = form.telefone.value.trim();
+    var email = form.email.value.trim();
+    var servico = form.servico.value;
+    var mensagem = form.mensagem.value.trim();
+
+    // 1) abre o WhatsApp imediatamente com a mensagem pronta — precisa ser chamado
+    //    de forma sincrona dentro do clique, senao o navegador bloqueia o popup.
+    var waText =
+      "Nova solicitação pelo site da LD:\n" +
+      "Nome: " + nome + "\n" +
+      "Telefone: " + telefone + "\n" +
+      "E-mail: " + email + "\n" +
+      "Serviço: " + servico + "\n" +
+      "Mensagem: " + mensagem;
+    window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(waText), "_blank");
+
+    // 2) manda uma copia por e-mail em segundo plano (falha silenciosa: o WhatsApp
+    //    ja garantiu o contato mesmo se o e-mail nao estiver configurado ou falhar).
+    if(WEB3FORMS_ACCESS_KEY && WEB3FORMS_ACCESS_KEY.indexOf("COLE_") !== 0){
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {"Content-Type":"application/json", "Accept":"application/json"},
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "Nova solicitação de orçamento — Site LD Engenharia",
+          from_name: nome,
+          nome: nome,
+          telefone: telefone,
+          email: email,
+          servico: servico,
+          mensagem: mensagem
+        })
+      }).catch(function(){ /* falha silenciosa, ja resolvido pelo WhatsApp */ });
     }
+
+    successBox.classList.add("show");
+    form.reset();
+    successBox.scrollIntoView({behavior:"smooth", block:"center"});
   });
   form.querySelectorAll("input,select,textarea").forEach(function(input){
     input.addEventListener("input", function(){
