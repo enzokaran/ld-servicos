@@ -276,12 +276,24 @@
   .hero-photo{
     position:absolute;inset:0;
     background-image:var(--img-hero);
-    background-size:cover;background-position:center;
+    background-size:cover;
+    /* --hero-pos: ponto focal da foto — ajustado por breakpoint abaixo para
+       manter o trabalhador enquadrado em qualquer proporcao de tela.
+       Se no futuro for usada uma foto real diferente, so re-ajustar estes valores. */
+    background-position:var(--hero-pos, center 30%);
     background-color:var(--graphite-800);
     transform:scale(var(--ps,1.06));
-    transition:transform 1.8s var(--ease);
+    transition:transform 1.8s var(--ease), background-position .3s var(--ease);
   }
   #hero.hero-ready .hero-photo{--ps:1;}
+  /* desktop grande: foto inteira, enquadramento padrao */
+  @media (min-width:1440px){ .hero-frame{ --hero-pos: center 25%; } }
+  /* desktop/notebook: leve ajuste para nao cortar o rosto */
+  @media (min-width:1024px) and (max-width:1439px){ .hero-frame{ --hero-pos: center 30%; } }
+  /* tablet: frame fica mais largo (16/11), sobe o foco para o torso/rosto */
+  @media (min-width:768px) and (max-width:1023px){ .hero-frame{ --hero-pos: center 20%; } }
+  /* celular: frame ainda mais largo, foco perto do topo para manter o trabalhador visivel */
+  @media (max-width:767px){ .hero-frame{ --hero-pos: center 12%; } }
   /* mascara escura nas extremidades para a foto conversar com o fundo */
   .hero-frame::after{
     content:"";position:absolute;inset:0;pointer-events:none;
