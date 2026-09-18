@@ -42,7 +42,7 @@
        comercial (Unsplash / Pexels) e servem apenas como ILUSTRACAO dos
        servicos — nao representam obras executadas pela LD.
        ================================================================= */
-    --img-hero:         url("https://images.unsplash.com/photo-1779636489807-ffad2fc04e8e?auto=format&fit=crop&w=1400&q=72");   /* hero-rocada.jpg — profissional com roçadeira de corpo */
+    --img-hero:         url("https://images.unsplash.com/photo-1779636489744-76eb81c44925?auto=format&fit=crop&w=1400&q=72");   /* hero-rocada.jpg — outro profissional realizando roçada/corte de vegetação */
     --img-rocada-feature: url("https://images.unsplash.com/photo-1779636489807-ffad2fc04e8e?auto=format&fit=crop&w=1600&q=72");  /* rocada-feature.jpg — foto grande da secao de rocada */
     --img-engineering:  url("https://images.unsplash.com/photo-1628158088791-89567a8e84ec?auto=format&fit=crop&w=1000&q=70");   /* engineering.jpg      */
     --img-electrical:   url("https://images.unsplash.com/photo-1758101755915-462eddc23f57?auto=format&fit=crop&w=1000&q=70");   /* electrical.jpg       */
@@ -759,6 +759,14 @@
   }
   .footer-social a:hover{border-color:var(--green-light);background:rgba(15,127,75,.15);}
   .footer-social svg{width:16px;height:16px;}
+  @media (max-width:859px){
+    .footer-top{grid-template-columns:1fr 1fr;gap:36px 24px;padding:56px 0 40px;}
+    .footer-brand{grid-column:1 / -1;text-align:center;padding-bottom:32px;border-bottom:1px solid var(--line-dark);}
+    .footer-brand .logo-mark{margin:0 auto 18px;}
+    .footer-brand p{margin:0 auto;}
+    .footer-top>div:nth-child(4){grid-column:1 / -1;border-top:1px solid var(--line-dark);padding-top:28px;margin-top:4px;}
+    .footer-bottom{flex-direction:column-reverse;text-align:center;gap:16px;}
+  }
 
   /* ---------- whatsapp float ---------- */
   #wa-float{
