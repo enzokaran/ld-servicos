@@ -219,13 +219,29 @@
   #hero{
     position:relative;min-height:100svh;
     display:flex;align-items:flex-end;
-    background:
-      radial-gradient(ellipse 90% 60% at 78% 8%, rgba(15,127,75,.22), transparent 60%),
-      linear-gradient(160deg, var(--graphite-950) 0%, #0e1210 55%, #10322199 130%),
-      var(--graphite-950);
+    background:var(--graphite-950);
     overflow:hidden;
     color:#fff;
   }
+  /* foto de fundo do hero (roçada/limpeza de vegetação) atras de todo o conteudo */
+  #hero .hero-bg{
+    position:absolute;inset:0;z-index:0;
+    background-image:url("https://images.unsplash.com/photo-1779636489807-ffad2fc04e8e?auto=format&fit=crop&w=2400&q=70");
+    background-size:cover;
+    /* --hero-bg-pos ajustado por breakpoint logo abaixo, pra manter o trabalhador visivel em qualquer tela */
+    background-position:var(--hero-bg-pos, center 32%);
+    filter:saturate(.82) contrast(1.02);
+  }
+  #hero .hero-bg::after{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 90% 60% at 78% 8%, rgba(15,127,75,.22), transparent 60%),
+      linear-gradient(160deg, rgba(12,15,14,.94) 0%, rgba(14,18,16,.90) 45%, rgba(16,50,33,.86) 100%);
+  }
+  @media (min-width:1440px){ #hero{ --hero-bg-pos: center 26%; } }
+  @media (min-width:1024px) and (max-width:1439px){ #hero{ --hero-bg-pos: center 30%; } }
+  @media (min-width:768px) and (max-width:1023px){ #hero{ --hero-bg-pos: center 22%; } }
+  @media (max-width:767px){ #hero{ --hero-bg-pos: center 14%; } }
   #hero .grid-overlay{
     position:absolute;inset:0;
     background-image:
@@ -753,6 +769,7 @@
 <!-- ============ HERO ============ -->
 <section id="top">
 <div id="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
   <div class="grid-overlay" aria-hidden="true"></div>
   <div class="bracket" aria-hidden="true"></div>
   <div class="container hero-inner">
