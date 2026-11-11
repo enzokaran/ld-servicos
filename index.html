@@ -54,14 +54,19 @@
     --img-electrical:   url("https://images.unsplash.com/photo-1758101755915-462eddc23f57?auto=format&fit=crop&w=1000&q=70");   /* electrical.jpg       */
     --img-civil:        url("https://images.unsplash.com/photo-1694521787193-9293daeddbaa?auto=format&fit=crop&w=1000&q=70");   /* civil.jpg            */
     --img-pruning:      url("https://images.unsplash.com/photo-1754321902809-5c21cbc67228?auto=format&fit=crop&w=1000&q=70");   /* pruning.jpg          */
-    --img-mowing:       url("https://images.unsplash.com/photo-1779636489807-ffad2fc04e8e?auto=format&fit=crop&w=1000&q=72");  /* mowing.jpg — profissional com roçadeira de corpo */
+    --img-mowing:       url("imagens/rocada-01.jpg");   /* mowing.jpg — foto real LD (rocada-01.jpg) */
     --img-maintenance:  url("https://images.unsplash.com/photo-1527199768775-bdabf8b32f61?auto=format&fit=crop&w=1000&q=70");   /* maintenance.jpg      */
     --img-about:        url("https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?auto=format&fit=crop&w=1000&q=72");   /* about-team.jpg       */
     --img-project-01:   url("https://images.unsplash.com/photo-1742112125567-3e8967bad60f?auto=format&fit=crop&w=1400&q=70");   /* project-01.jpg       */
     --img-project-02:   url("https://images.unsplash.com/photo-1509390221805-d1c887a72a00?auto=format&fit=crop&w=1000&q=70");   /* project-02.jpg       */
     --img-project-03:   url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=70");   /* project-03.jpg       */
     --img-project-04:   url("https://images.unsplash.com/photo-1754321889123-0485c7fea5f1?auto=format&fit=crop&w=1000&q=70");   /* project-04.jpg       */
-    --img-project-05:   url("https://images.unsplash.com/photo-1779636489807-ffad2fc04e8e?auto=format&fit=crop&w=1000&q=70");   /* project-05.jpg — roçada, profissional com roçadeira de corpo */
+    --img-project-05:   url("imagens/rocada-01.jpg");   /* rocada-01.jpg — foto real LD */
+    --img-rocada-02:   url("imagens/rocada-02.jpg");   /* foto real LD */
+    --img-rocada-03:   url("imagens/rocada-03.jpg");   /* foto real LD */
+    --img-rocada-04:   url("imagens/rocada-04.jpg");   /* foto real LD */
+    --img-rocada-05:   url("imagens/rocada-05.jpg");   /* foto real LD */
+    --img-rocada-06:   url("imagens/rocada-06.jpg");   /* foto real LD */
     --img-project-06:   url("https://images.unsplash.com/photo-1660330590022-9f4ff56b63f6?auto=format&fit=crop&w=1000&q=70");   /* project-06.jpg       */
   }
 
@@ -939,7 +944,7 @@
   <div class="container">
 
     <div class="service-featured reveal">
-      <div class="sf-media"><div class="photo" style="--img:var(--img-mowing)" role="img" aria-label="Profissional realizando roçada em terreno"></div></div>
+      <div class="sf-media"><div class="photo" style="--img:var(--img-mowing)" role="img" aria-label="Serviço de roçada realizado em terreno"></div></div>
       <div class="sf-content">
         <span class="sf-tag">01 · Serviço em destaque</span>
         <h3>Roçada e corte de vegetação</h3>
@@ -1111,9 +1116,44 @@
         </div>
       </div>
       <div class="gallery-item big" data-cat="Roçada">
-        <div class="gallery-card" tabindex="0" role="button" aria-label="Roçada — Manutenção de áreas externas" data-img="var(--img-project-05)" data-label="Manutenção de áreas externas">
-          <div class="ph" style="--img:var(--img-project-05)" role="img" aria-label="Equipamento realizando manutenção de área externa"></div>
-          <div class="caption"><div class="cat">Roçada</div><div class="lbl">Manutenção de áreas externas</div><div class="sub">Imagem ilustrativa</div></div>
+        <div class="gallery-card" tabindex="0" role="button" aria-label="Roçada — Manutenção de áreas externas" data-img="var(--img-project-05)" data-label="Manutenção de áreas externas" data-note="Serviço realizado pela LD">
+          <div class="ph" style="--img:var(--img-project-05)" role="img" aria-label="Serviço de roçada e manutenção de área externa realizado pela LD"></div>
+          <div class="caption"><div class="cat">Roçada</div><div class="lbl">Manutenção de áreas externas</div><div class="sub">Serviço realizado</div></div>
+          <div class="zoom-ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></div>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="Roçada" data-extra="1" style="display:none">
+        <div class="gallery-card" tabindex="0" role="button" aria-label="Roçada — Roçada e limpeza de terreno" data-img="var(--img-rocada-02)" data-label="Roçada e limpeza de terreno" data-note="Serviço realizado pela LD">
+          <div class="ph" style="--img:var(--img-rocada-02)" role="img" aria-label="Serviço de roçada e limpeza de terreno realizado pela LD"></div>
+          <div class="caption"><div class="cat">Roçada</div><div class="lbl">Roçada e limpeza de terreno</div><div class="sub">Serviço realizado</div></div>
+          <div class="zoom-ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></div>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="Roçada" data-extra="1" style="display:none">
+        <div class="gallery-card" tabindex="0" role="button" aria-label="Roçada — Roçada e limpeza de terreno" data-img="var(--img-rocada-03)" data-label="Roçada e limpeza de terreno" data-note="Serviço realizado pela LD">
+          <div class="ph" style="--img:var(--img-rocada-03)" role="img" aria-label="Serviço de roçada e limpeza de terreno realizado pela LD"></div>
+          <div class="caption"><div class="cat">Roçada</div><div class="lbl">Roçada e limpeza de terreno</div><div class="sub">Serviço realizado</div></div>
+          <div class="zoom-ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></div>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="Roçada" data-extra="1" style="display:none">
+        <div class="gallery-card" tabindex="0" role="button" aria-label="Roçada — Roçada e limpeza de terreno" data-img="var(--img-rocada-04)" data-label="Roçada e limpeza de terreno" data-note="Serviço realizado pela LD">
+          <div class="ph" style="--img:var(--img-rocada-04)" role="img" aria-label="Serviço de roçada e limpeza de terreno realizado pela LD"></div>
+          <div class="caption"><div class="cat">Roçada</div><div class="lbl">Roçada e limpeza de terreno</div><div class="sub">Serviço realizado</div></div>
+          <div class="zoom-ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></div>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="Roçada" data-extra="1" style="display:none">
+        <div class="gallery-card" tabindex="0" role="button" aria-label="Roçada — Roçada e limpeza de terreno" data-img="var(--img-rocada-05)" data-label="Roçada e limpeza de terreno" data-note="Serviço realizado pela LD">
+          <div class="ph" style="--img:var(--img-rocada-05)" role="img" aria-label="Serviço de roçada e limpeza de terreno realizado pela LD"></div>
+          <div class="caption"><div class="cat">Roçada</div><div class="lbl">Roçada e limpeza de terreno</div><div class="sub">Serviço realizado</div></div>
+          <div class="zoom-ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></div>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="Roçada" data-extra="1" style="display:none">
+        <div class="gallery-card" tabindex="0" role="button" aria-label="Roçada — Roçada e limpeza de terreno" data-img="var(--img-rocada-06)" data-label="Roçada e limpeza de terreno" data-note="Serviço realizado pela LD">
+          <div class="ph" style="--img:var(--img-rocada-06)" role="img" aria-label="Serviço de roçada e limpeza de terreno realizado pela LD"></div>
+          <div class="caption"><div class="cat">Roçada</div><div class="lbl">Roçada e limpeza de terreno</div><div class="sub">Serviço realizado</div></div>
           <div class="zoom-ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></div>
         </div>
       </div>
@@ -1389,7 +1429,7 @@
       btn.classList.add("active");
       var f = btn.getAttribute("data-filter");
       galleryItems.forEach(function(item){
-        var show = (f === "all" || item.getAttribute("data-cat") === f);
+        var show = (f === "all") ? !item.hasAttribute("data-extra") : (item.getAttribute("data-cat") === f);
         item.style.display = show ? "" : "none";
       });
     });
@@ -1405,6 +1445,7 @@
       lbCat.textContent = card.querySelector(".cat").textContent;
       lbTitle.textContent = card.getAttribute("data-label") || "Serviço";
       lbImg.style.backgroundImage = card.getAttribute("data-img") || "none";
+      lightbox.querySelector(".lb-note").textContent = card.getAttribute("data-note") || "Imagem ilustrativa do serviço";
       lightbox.classList.add("open");
     }
     card.addEventListener("click", openLb);
